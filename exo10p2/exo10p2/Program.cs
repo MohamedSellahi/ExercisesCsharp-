@@ -13,39 +13,28 @@ namespace exo10p2 {
       List<string> prenom = new List<string>();
       List<string> tel = new List<string>();
       
-
-      using(FileStream srt = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.Read)) {
-
-        string Line, input;
-
-        using(StreamReader sr = new StreamReader(srt)) {
-
-          Console.WriteLine("entrer text");
-          
-          while((input = Console.ReadLine()) != "stop") {
-            if((Line = sr.ReadLine()) == null) {
-              break;
-            }
-            
-            Console.WriteLine(Line);
-            Console.WriteLine("Valeur de seek Lire suivant");
-            long pos = srt.Seek(0, SeekOrigin.Begin);
-            Console.WriteLine("pos actuelle {0}", pos);
-            input = Console.ReadLine();
-            
-          }
-
-        }
-
-
-        
-      }
-
       string line;
       string[] tockens;
       char delimiter = '/';
       int nContact = 0;
+      int nContactEnregistre = 5;
 
+      // Test ecriture
+      try {
+        using(StreamWriter sr = new StreamWriter(filePath)) {
+          for(int i = 0; i < nContactEnregistre; i++) {
+            sr.Write("nom{0}" + delimiter + "prenom{1}" + delimiter + "tel{2}" + Environment.NewLine, i, i, i);
+          }
+
+        }
+
+      }
+      catch(Exception e) {
+        Console.WriteLine("can't write to file");
+        Console.WriteLine(e.Message);
+      }
+
+      // test lecture 
       try {
         using(StreamReader sr = new StreamReader(filePath)) {
           
