@@ -1,0 +1,6 @@
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo4p5\exo4p5\bin\Debug\exo4p5.exe.config
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo4p5\exo4p5\bin\Debug\exo4p5.exe
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo4p5\exo4p5\bin\Debug\exo4p5.pdb
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo4p5\exo4p5\obj\Debug\exo4p5.csprojResolveAssemblyReference.cache
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo4p5\exo4p5\obj\Debug\exo4p5.exe
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo4p5\exo4p5\obj\Debug\exo4p5.pdb

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exo2p2", "exo2p2\exo2p2.csproj", "{844A926B-F81D-4081-A2FD-13F18DA91910}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{844A926B-F81D-4081-A2FD-13F18DA91910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{844A926B-F81D-4081-A2FD-13F18DA91910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{844A926B-F81D-4081-A2FD-13F18DA91910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{844A926B-F81D-4081-A2FD-13F18DA91910}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

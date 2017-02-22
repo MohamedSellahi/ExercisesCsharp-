@@ -1,0 +1,5 @@
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo3p2\exo3p2\bin\Debug\exo3p2.exe.config
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo3p2\exo3p2\bin\Debug\exo3p2.exe
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo3p2\exo3p2\bin\Debug\exo3p2.pdb
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo3p2\exo3p2\obj\Debug\exo3p2.exe
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo3p2\exo3p2\obj\Debug\exo3p2.pdb

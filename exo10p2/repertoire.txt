@@ -1,0 +1,5 @@
+nom1 prenom1 tel1
+nom2 prenom2 tel2
+nom3 prenom3 tel3modif
+nom3 prenom3 tel3
+nom4 prenom4 tel4

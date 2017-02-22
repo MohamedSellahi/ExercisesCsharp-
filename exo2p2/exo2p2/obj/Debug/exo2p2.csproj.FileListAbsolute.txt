@@ -1,0 +1,6 @@
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo2p2\exo2p2\bin\Debug\exo2p2.exe.config
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo2p2\exo2p2\bin\Debug\exo2p2.exe
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo2p2\exo2p2\bin\Debug\exo2p2.pdb
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo2p2\exo2p2\obj\Debug\exo2p2.csprojResolveAssemblyReference.cache
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo2p2\exo2p2\obj\Debug\exo2p2.exe
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo2p2\exo2p2\obj\Debug\exo2p2.pdb

@@ -1,0 +1,6 @@
+c:\users\34011-36-05\documents\visual studio 2015\Projects\prg0\prg0\bin\Debug\prg0.exe.config
+c:\users\34011-36-05\documents\visual studio 2015\Projects\prg0\prg0\bin\Debug\prg0.exe
+c:\users\34011-36-05\documents\visual studio 2015\Projects\prg0\prg0\bin\Debug\prg0.pdb
+c:\users\34011-36-05\documents\visual studio 2015\Projects\prg0\prg0\obj\Debug\prg0.csprojResolveAssemblyReference.cache
+c:\users\34011-36-05\documents\visual studio 2015\Projects\prg0\prg0\obj\Debug\prg0.exe
+c:\users\34011-36-05\documents\visual studio 2015\Projects\prg0\prg0\obj\Debug\prg0.pdb

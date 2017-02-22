@@ -1,0 +1,5 @@
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo6p11\exo6p11\bin\Debug\exo6p11.exe.config
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo6p11\exo6p11\bin\Debug\exo6p11.exe
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo6p11\exo6p11\bin\Debug\exo6p11.pdb
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo6p11\exo6p11\obj\Debug\exo6p11.exe
+c:\users\34011-36-05\documents\visual studio 2015\Projects\exo6p11\exo6p11\obj\Debug\exo6p11.pdb
