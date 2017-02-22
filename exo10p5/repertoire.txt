@@ -1,6 +1,3 @@
-benjamin        Telben       mailben@afpa.fr               
-Clement         060606       mailClement@afpa.fr                          
-david           000000       david@afpa.fr                 
-Herve           0000         herve@afpa.fr                 
-Mike            12345        Mike@afpa.fr                  
-Mohamed         0000         mohamed@afpa.fr               
+contact1        111111       contact1@afpa.fr              
+Contact2        22222        Contact2@afpa.fr              
+contact3        33333        contact3@afpa.fr              
