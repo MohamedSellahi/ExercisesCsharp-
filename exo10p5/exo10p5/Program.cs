@@ -10,9 +10,10 @@ namespace exo10p5 {
   class Program {
     static void Main(string[] args) {
 
-      
-      //string filePath = @"C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\exo10p5\repertoire.txt";
-      string filePath = @"C:\Users\Mohamed\Documents\Visual Studio 2015\Projects\ExercisesCsharp-\exo10p5\repertoire.txt"; 
+      string fileExtension = ".txt";
+      string fileName = @"C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\exo10p5\repertoire";
+      string filePath = fileName + fileExtension;
+ 
       ContactProperties props;
       props.maxNameLen = 16;
       props.maxTelLen = 13;
@@ -66,31 +67,32 @@ namespace exo10p5 {
                           "p- Afficher info contact\n"+
                           "d- Afficher tous les contacts\n"+
                           "c- Clear\n"+
+                          "b- Créer un backup\n"+
                           "q- Quitter\n");
 
         UserInput = Console.ReadLine();  // TODO try catch ? 
         switch(UserInput) {
-          case "a":
+          case "a":// add contacts
           case "A":
             AddContacts(Carnet, props);
             break;
-          case "e":
+          case "e"://edit contacts
           case "E":
             EditContacts(Carnet, props);
             break;
-          case "s":
+          case "s":// delete contacts
           case "S":
             DeleteContacts(Carnet, props);
             break;
-          case "p":
+          case "p":// Print contact
           case "P":
             PrintContactsWrapper(Carnet, props);
             break;
-          case "d":
+          case "d":// dump directory
           case "D":
             PrintAllContacts(Carnet);
             break; 
-          case "q":
+          case "q":// quit
           case "Q":
             // quit 
             Ongoing = false;
@@ -98,6 +100,10 @@ namespace exo10p5 {
           case "c":
           case "C":
             Console.Clear();
+            break;
+          case "b":
+          case "B":// Backup
+            BackupContacts(Carnet, fileName);
             break;
             
           default:
@@ -107,15 +113,7 @@ namespace exo10p5 {
       }// end while ongoing 
 
       /****** save all contacts *****/
-      using(StreamWriter sw = File.CreateText(filePath)) {
-        foreach(var item in Carnet) {
-          sw.WriteLine("{0}{1}{2}", item.Nom, item.NumTel, item.Mail);
-        }
-
-
-
-      }
-      
+      SaveAllContacts(Carnet, filePath);      
       
        
 
@@ -226,7 +224,21 @@ namespace exo10p5 {
 
       if(index > -1) { // contact exists: proceed to delete
         //DeleteContact(carnet, index);
-        carnet.Remove(carnet[index]);   //
+        // ask for confirmation
+        Console.WriteLine("êtes vous sure de vouloir supprimer {0} :", carnet[index].Nom.Trim());
+        string response = Console.ReadLine();
+        if(response == "O") {
+          try {
+            carnet.Remove(carnet[index]);   //
+            Console.WriteLine("Suppression avec success.");
+            Console.WriteLine();
+          }
+          catch(Exception e) {
+            Console.WriteLine("Une erreur est survenu pendant la suppression de {0}:", carnet[index].Nom.Trim());
+            Console.WriteLine(e.Message);
+          }
+         
+        }
       }
       else {
         Console.WriteLine(" Contact introuvable !"); 
@@ -381,7 +393,34 @@ namespace exo10p5 {
       Console.WriteLine();
     }
 
+    // save contacts to text file
 
+      public static void SaveAllContacts(List<Contact> carnet, string filePath) {
+      try {
+        int count = 0;
+        using(StreamWriter sw = File.CreateText(filePath)) {
+          foreach(var item in carnet) {
+            sw.WriteLine("{0}{1}{2}", item.Nom, item.NumTel, item.Mail);
+            ++count;
+          }
+          // may be reRead and check 
+          PrintSuccess(string.Format("{0} contact(s) ont été onrigistrés avec success", count));
+
+        }
+
+      }
+      catch(Exception e) {
+        Console.WriteLine("une erreur est survenue pendant la sauvegarde ");
+        Console.WriteLine(e.Message);        
+      }
+    }
+
+    // Create backUp in the same directory 
+    // 
+
+      public static void BackupContacts(List<Contact> carnet, string filePath) {
+      SaveAllContacts(carnet, filePath + "BAK" + ".txt");
+    }
 
 
     public static void PrintContactInfo(Contact c) {
