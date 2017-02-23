@@ -1,6 +1,5 @@
-nom0 prenom0 tel0
-nom1 prenom1 tel1
-nom2 prenom2 tel2modif
-nom2 prenom2 tel2
-nom3 prenom3 tel3
-nom4 prenom4 tel4
+nom0/prenom0/tel0
+nom1/prenom1/tel1
+nom2/prenom2/tel2
+nom3/prenom3/tel3
+nom4/prenom4/tel4

@@ -66,12 +66,13 @@ namespace exo10p5 {
                           "s- Supprimer contact\n"+
                           "p- Afficher info contact\n"+
                           "d- Afficher tous les contacts\n"+
+                          "v- Verifier les contacts"+
                           "c- Clear\n"+
                           "b- Créer un backup\n"+
                           "q- Quitter\n");
 
         UserInput = Console.ReadLine();  // TODO try catch ? 
-        switch(UserInput) {
+        switch(UserInput) { // parse user input
           case "a":// add contacts
           case "A":
             AddContacts(Carnet, props);
@@ -91,6 +92,10 @@ namespace exo10p5 {
           case "d":// dump directory
           case "D":
             PrintAllContacts(Carnet);
+            break;
+          case "v":
+          case "V":
+            VerifyContacts(Carnet, props);
             break; 
           case "q":// quit
           case "Q":
@@ -114,17 +119,9 @@ namespace exo10p5 {
 
       /****** save all contacts *****/
       SaveAllContacts(Carnet, filePath);      
-      
-       
-
-
-
-
+  
 
     }// end Main 
-
-
-
 
 
 
@@ -153,19 +150,17 @@ namespace exo10p5 {
       tmpName = TrimInput(ref tmpName, props.maxNameLen);
       int index = ContactExists(carnet, tmpName); 
       if(index > -1) { // contact exists: suggest edition
-        Console.WriteLine("le contact {0} exist déjà: Voulez vous l'éditer (O/N)? ");
+        Console.WriteLine("le contact {0} exist déjà: Voulez vous l'éditer (O/N)? ", tmpName.Trim());
         string choice;
         choice = Console.ReadLine();
         if(choice == "O") { // proceed to edit
           EditContact(carnet, tmpName, index, props); 
-
         }
         else { // contact does not exist: we dojn't want to edit : return 
           return; 
         }
       }
       else { // contact doenot exist : add
-
         AddContact(carnet, tmpName, props); 
       }
 
@@ -204,7 +199,62 @@ namespace exo10p5 {
     }
 
 
+    // Verify Contacts :
 
+      public static void VerifyContacts(List<Contact> carnet, ContactProperties props) {
+
+      if(carnet.Count == 0) {
+        Console.WriteLine(" le répertoire est vide");
+        return;
+      }
+
+      // loop over all contacts and Verify
+
+      for(int i = 0; i < carnet.Count; i++) {
+
+        if(!IsValidContactMail(carnet[i], props)) {
+          Console.WriteLine("l'email de {0} n'est pas vallid: voulez vous le corriger ?(O/N):", carnet[i].Nom.Trim());
+          string UserInput = Console.ReadLine();  // TODO try catch ?
+          if(UserInput == "O") {
+            EditContact(carnet, carnet[i].Nom, i, props);
+          }
+         
+        }
+
+        // 
+
+
+      }// end for 
+
+      
+    } 
+
+    // Verify Name validity
+
+      public static bool IsValidContactName(Contact c, ContactProperties props) {
+      Console.WriteLine("pas implementée encore");
+      return false; 
+    }
+
+    // VerifyTel validity
+    public static bool IsValidContactTel(Contact c, ContactProperties props) {
+      Console.WriteLine("pas implementée encore");
+      return false;
+    }
+
+    // Verify Mail validity
+    public static bool IsValidContactMail(Contact c, ContactProperties props) {
+      // we look for @ 
+      for(int i = 0; i < c.Mail.Length; i++) {
+
+        if(c.Mail[i] == '@') {
+          return true; 
+        }
+      }
+
+      // else
+      return false;
+    }
 
 
 

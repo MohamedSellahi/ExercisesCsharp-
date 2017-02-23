@@ -58,6 +58,7 @@ namespace exo10p2 {
         Console.WriteLine(e.Message);
       }
 
+
       try {
         using(StreamWriter sr = new StreamWriter(filePath)) {
           int n = 2;
