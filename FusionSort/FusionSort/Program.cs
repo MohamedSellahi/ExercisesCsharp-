@@ -1,8 +1,11 @@
-﻿using System;
+﻿/**************************** CE CODE NE MARCHE PAS **************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace FusionSort {
   class Program {
@@ -61,12 +64,7 @@ namespace FusionSort {
 
     }
 
-
-
-
-
-
-
+    
 
     public static int[] PartialFusion(int[] A, int[] B, int StartA, int EndA, int StartB, int EndB) {
       int lenA = EndA - StartA + 1,

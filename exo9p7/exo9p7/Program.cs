@@ -17,10 +17,10 @@ namespace exo9p7 {
 
 
 
-      char newChar;
+      char Monchar;
       for(int i = 0; i < message.Length; i++) {
-        newChar = message[i];
-        msgChars[i] = (char)(Convert.ToUInt16(newChar) + decalage);
+        Monchar = message[i];
+        msgChars[i] = (char)(Monchar + decalage);
       }
 
       Console.WriteLine("-------------------------------");
