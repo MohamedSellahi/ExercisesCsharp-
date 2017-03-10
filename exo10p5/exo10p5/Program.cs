@@ -66,7 +66,7 @@ namespace exo10p5 {
                           "s- Supprimer contact\n"+
                           "p- Afficher info contact\n"+
                           "d- Afficher tous les contacts\n"+
-                          "v- Verifier les contacts"+
+                          "v- Verifier les contacts\n"+
                           "c- Clear\n"+
                           "b- Créer un backup\n"+
                           "q- Quitter\n");
@@ -108,7 +108,7 @@ namespace exo10p5 {
             break;
           case "b":
           case "B":// Backup
-            BackupContacts(Carnet, fileName);
+            BackupContacts(Carnet, fileName, ".png");
             break;
             
           default:
@@ -217,7 +217,9 @@ namespace exo10p5 {
           string UserInput = Console.ReadLine();  // TODO try catch ?
           if(UserInput == "O") {
             EditContact(carnet, carnet[i].Nom, i, props);
-          }
+          } // TODO : add else
+
+
          
         }
 
@@ -468,8 +470,8 @@ namespace exo10p5 {
     // Create backUp in the same directory 
     // 
 
-      public static void BackupContacts(List<Contact> carnet, string filePath) {
-      SaveAllContacts(carnet, filePath + "BAK" + ".txt");
+      public static void BackupContacts(List<Contact> carnet, string filePath,string fileExtention) {
+      SaveAllContacts(carnet, filePath + "BAK" + fileExtention);
     }
 
 
