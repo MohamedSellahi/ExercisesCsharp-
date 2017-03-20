@@ -17,25 +17,17 @@ namespace TP1 {
 
       Salarie s2 = new Salarie("Mo", 2, 1, 0, 100.0D);
       Console.WriteLine("Nombre de salarié: {0}", Salarie.NombreSalarie);
-      //Fun();
-      //Console.WriteLine("Apres fun");
-      //Console.WriteLine("Nombre de salarié: {0}", Salarie.NombreSalarie);
-
-      //Fraction f1 = new Fraction(1, 3);
-      //Fraction f2 = new Fraction(2, 9);
-      
-      
-
-      //Console.WriteLine(f1.Equals(f2));
-      //Console.WriteLine(s2.ToString());
+     
       Console.WriteLine(s1.Equals(2));
       Console.WriteLine("-------------- Commercial ------------");
       Commercial c1 = new Commercial("MohCommercial", 2, 1, 0, 100.0D, 15);
       Console.WriteLine(c1.ToString());
+
+      Salarie s3 = new Salarie("AAA", 2, 1, 0, 100.0D);
+      Salarie s4 = new Salarie("AB", 2, 1, 0, 100.0D);
+      Console.WriteLine("Comparaison des salariés: {0} ", s4.CompareTo(s3));
       
       
-
-
     }
 
     public static void Fun() {

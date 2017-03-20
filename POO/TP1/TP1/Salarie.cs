@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace TP1 {
-  class Salarie: Personne, IRemunerable {
+  class Salarie : Personne, IRemunerable, IComparable<Salarie> {
     /// <summary>
     /// matricule de salarié
     /// </summary>
@@ -18,7 +18,7 @@ namespace TP1 {
     /// les services assurés par la salarié
     /// </summary>
     protected int _service;
-   
+
     /// <summary>
     /// salaire 
     /// </summary>
@@ -107,7 +107,7 @@ namespace TP1 {
 
     // constructeurs 
 
-    public Salarie(string nomSal, int mat, int catg, int serv, double sal):base(nomSal) {
+    public Salarie(string nomSal, int mat, int catg, int serv, double sal) : base(nomSal) {
       _matricule = mat;
       _categorie = catg;
       _service = serv;
@@ -144,6 +144,19 @@ namespace TP1 {
 
     public override int GetHashCode() {
       return base.GetHashCode();
+    }
+
+    // for any ibject 
+    public int CompareTo(object obj) {
+      if (!(obj is Salarie)) {
+        throw new InvalidCastException(String.Format("Argument de type {0} n'est pas comparable avec {0}", obj.GetType().Name, this.GetType().Name));
+      }
+      return String.Compare(this.NOM, ((Salarie)obj).NOM);
+    }
+
+    // for salaire objects 
+    public int CompareTo(Salarie other) {
+      return String.Compare(this.NOM, other.NOM);
     }
 
 
