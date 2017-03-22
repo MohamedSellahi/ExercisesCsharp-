@@ -8,16 +8,17 @@ namespace TPException {
   class Program {
     static void Main(string[] args) {
       try {
-        Salarie s = new Salarie("Mohamed", 1, 0, 23, 100);
+        Salarie s = new Salarie("Mohamed", 1, 1, 23, -100);
        
         Console.WriteLine(s.ToString());
       }
       catch (SalarieException e) {
         Console.WriteLine(e.ToString());
-        //Console.WriteLine(e.StackTrace);
-        //Console.WriteLine(e.GetType());
+        
       }
 
+      
+      
       
 
 

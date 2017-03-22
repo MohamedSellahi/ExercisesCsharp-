@@ -27,6 +27,7 @@ namespace CostomComparerDict {
       };
 
       Console.WriteLine(Dict1.Contains(elementToFind, new StudentDictionnaryComparer()));
+      
 
       for (int i = 0; i < Dict1.Count; i++) {
         Console.WriteLine("Index: {0}, Key: {1}, Value: {2}",i, Dict1.ElementAt(i).Key, Dict1.ElementAt(i).Value.StudentName);

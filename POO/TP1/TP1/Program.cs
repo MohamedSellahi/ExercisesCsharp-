@@ -9,6 +9,7 @@ using System.IO;
 namespace TP1 {
   class Program {
     static void Main(string[] args) {
+
       Console.WriteLine("Nombre de salarié: {0}", Salarie.NombreSalarie);
       Salarie s1 = new Salarie("Moh", 2, 1, 0, 100.0D);
 
@@ -26,8 +27,8 @@ namespace TP1 {
       Salarie s3 = new Salarie("AAA", 2, 1, 0, 100.0D);
       Salarie s4 = new Salarie("AB", 2, 1, 0, 100.0D);
       Console.WriteLine("Comparaison des salariés: {0} ", s4.CompareTo(s3));
-      
-      
+
+           
     }
 
     public static void Fun() {

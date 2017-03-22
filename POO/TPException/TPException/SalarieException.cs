@@ -44,8 +44,7 @@ namespace TPException {
 
     }
 
-
-    public override string ToString() {
+    public new string ToString() {
       //return base.ToString(); compliqué 
       return _message;
     }

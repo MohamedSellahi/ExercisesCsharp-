@@ -5,9 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestCollections {
-  class Program {
-    static void Main(string[] args) {
+namespace TestCollections
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
       int[] tab1 = new int[5];
       int[] tab2 = (int[])tab1.Clone();
       tab1[0] = 5;
@@ -65,18 +68,21 @@ namespace TestCollections {
       // accessing elements of dictionnaries 
       Console.WriteLine("Using for statements");
 
-      for (int i = 0; i < dict1.Count; i++) {
+      for (int i = 0; i < dict1.Count; i++)
+      {
         Console.WriteLine("Key: {0}, Value: {1}", dict1.Keys.ElementAt(i), dict1.Values.ElementAt(i));
       }
       Console.WriteLine("---------------------------------");
       Console.WriteLine("Accessing individual elements ");
       dict1.Add(0, "Zero");
 
-      try {
+      try
+      {
         Console.WriteLine(dict1[0]);
       }
-      catch (KeyNotFoundException e) {
-        
+      catch (KeyNotFoundException e)
+      {
+
         Console.WriteLine(e);
         Console.WriteLine();
         Console.WriteLine("----------------------");
@@ -84,19 +90,21 @@ namespace TestCollections {
       }
 
       Console.WriteLine("trygetValue ");
-      try {
+      try
+      {
         string str;
         dict1.TryGetValue(4, out str);
         Console.WriteLine(str);
       }
-      catch (Exception e) {
+      catch (Exception e)
+      {
         Console.WriteLine(e);
       }
 
       Console.WriteLine("ContainKey & contains");
       Console.WriteLine(dict1.ContainsKey(0));
       Console.WriteLine(dict1.Contains(new KeyValuePair<int, string>(1, "One1")));
-      
+
 
 
 
@@ -104,23 +112,115 @@ namespace TestCollections {
       Console.WriteLine();
 
 
-      foreach (KeyValuePair<int,string> item in dict3) {
+      foreach (KeyValuePair<int, string> item in dict3)
+      {
         Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
       }
 
-      foreach (KeyValuePair<int, string> item in dict1) {
+      foreach (KeyValuePair<int, string> item in dict1)
+      {
         Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
       }
+      Console.WriteLine();
+      Console.WriteLine("------------------");
 
-      
+
 
       /***********************
        Queue, stack 
       */
-      Queue<int> queue1 = new Queue<int>();
-      queue1.Enqueue(1);
-      queue1.Enqueue(2);
 
+      Queue Q = new Queue();
+      for (int i = 0; i < 5; i++)
+      {
+        Q.Enqueue(i);
+      }
+      Console.WriteLine("Number of elements in queue: {0}", Q.Count);
+
+      while (Q.Count > 0)
+      {
+        Console.WriteLine(Q.Dequeue());
+      }
+      Console.WriteLine("Number of elements in the Queue {0}", Q.Count);
+
+      for (int i = 2; i < 5; i++)
+      {
+        Q.Enqueue(i);
+      }
+
+      Console.WriteLine("Number of elements in the Queue {0}", Q.Count);
+      Console.WriteLine(Q.Peek());
+      Console.WriteLine("-------");
+
+      // iterating without removing 
+
+      foreach (var item in Q.ToArray())
+      {
+        Console.WriteLine(item);
+      }
+
+      Console.WriteLine("--------- Contains ----------");
+      Console.WriteLine("Q.Contains(2) --> {0}", Q.Contains(2));
+      Console.WriteLine("Q.Contains(100) --> {0}", Q.Contains(100));
+
+
+      //
+      Console.WriteLine("\n\n");
+      Console.WriteLine("********** LIST ************");
+      List<int> intList = new List<int>();
+
+      intList.Add(10);
+      intList.Add(20);
+      intList.Add(30);
+      intList.Add(40);
+
+      IList<string> strList = new List<string>();
+      strList.Add("one");
+      strList.Add("two");
+      strList.Add("three");
+      strList.Add("four");
+      strList.Add("four");
+      strList.Add(null);
+      strList.Add(null);
+
+      IList<Student> studentList = new List<Student>();
+      studentList.Add(new Student() { StudentID = 1, StudentName = "Bill" });
+      studentList.Add(new Student() { StudentID = 2, StudentName = "Steve" });
+      studentList.Add(new Student() { StudentID = 3, StudentName = "Moin" });
+      foreach (var item in studentList)
+      {
+        Console.WriteLine(item);
+      }
+
+      
+
+      //for (int i = 0; i < studentList.Count; i++)
+      //{
+      //  studentList[i].StudentID = i;
+      //  studentList[i].StudentName = "_name_" + i.ToString();
+
+      //  Console.WriteLine(studentList[i].ToString());
+      //}
+
+      IList<int> intList1 = new List<int>();
+      intList1.Add(10);
+      intList1.Add(20);
+      intList1.Add(30);
+      intList1.Add(40);
+
+      List<int> intList2 = new List<int>();
+      intList2.AddRange(intList1);
+      Console.WriteLine(intList2);
+
+      Console.WriteLine();
+      Console.WriteLine("Inserting an element");
+      intList1.Insert(1, 11);
+      
+      
+      
+
+      
+      
 
 
 
