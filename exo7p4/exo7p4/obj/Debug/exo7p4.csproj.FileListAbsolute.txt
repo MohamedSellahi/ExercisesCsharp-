@@ -1,6 +1,0 @@
-c:\users\34011-36-05\documents\visual studio 2015\Projects\exo7p4\exo7p4\bin\Debug\exo7p4.exe.config
-c:\users\34011-36-05\documents\visual studio 2015\Projects\exo7p4\exo7p4\bin\Debug\exo7p4.exe
-c:\users\34011-36-05\documents\visual studio 2015\Projects\exo7p4\exo7p4\bin\Debug\exo7p4.pdb
-c:\users\34011-36-05\documents\visual studio 2015\Projects\exo7p4\exo7p4\obj\Debug\exo7p4.csprojResolveAssemblyReference.cache
-c:\users\34011-36-05\documents\visual studio 2015\Projects\exo7p4\exo7p4\obj\Debug\exo7p4.exe
-c:\users\34011-36-05\documents\visual studio 2015\Projects\exo7p4\exo7p4\obj\Debug\exo7p4.pdb
