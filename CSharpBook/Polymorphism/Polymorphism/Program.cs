@@ -23,6 +23,12 @@ namespace Polymorphism {
       Console.WriteLine("###");
       Console.WriteLine("#");
       Console.WriteLine("#");
+      //
+      Console.WriteLine("----------------");
+      ThreeDCercle cer = new ThreeDCercle();
+      cer.Draw(); // calls 3d implementation 
+      ((Cercle)cer).Draw(); // cast force calling draw of cercle class
+      
 
 
     }// main 

@@ -78,6 +78,8 @@ namespace LCD {
     /// </summary>
     public void Display() {
       SetConsole();
+      Console.WriteLine();                       // TODO adapt length of str to the width of LCD
+      Console.WriteLine(new string('=', WIDTH+3));
       for (int i = 0; i < HIGHT; i++) {
         for (int j = 0; j < WIDTH; j++) {
           Console.Write(_buffer[i, j]);
@@ -90,8 +92,8 @@ namespace LCD {
     /// Sets the console window to the appropriate size
     /// </summary>
     public void SetConsole() {
-      Console.WindowWidth = WIDTH + 1;
-      Console.WindowHeight = HIGHT + 1;
+      Console.WindowWidth = WIDTH + 3;
+      Console.WindowHeight = HIGHT + 3;
     }
 
     public void DrawChar(Character c) {
@@ -129,14 +131,12 @@ namespace LCD {
 
         if (WIDTH - XCursor < tmpChar.WIDTH) { // is there enough space for the next character. we can split words
           XCursor = 0;
-          YCursor += tmpChar.HIGHT + 1;
+          YCursor += tmpChar.HIGHT;
         }
 
         DrawChar(tmpChar, XCursor, YCursor);
         XCursor += (tmpChar.WIDTH + f.SPACEWIDTH); // update XCursor
-        if (!(XCursor < HIGHT)) {
-          XCursor = 0;
-        }
+        
 
 
       }

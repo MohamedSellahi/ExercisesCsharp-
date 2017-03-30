@@ -60,7 +60,6 @@ namespace LCD {
       //    Console.Write(A._content[i,j]);
       //  }
       //  Console.WriteLine();
-
       //}
 
 
