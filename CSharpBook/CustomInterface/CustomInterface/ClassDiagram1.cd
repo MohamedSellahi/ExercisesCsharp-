@@ -48,7 +48,7 @@
     <Lollipop Position="0.856" />
   </Class>
   <Class Name="CustomInterface.Knife" BaseTypeListCollapsed="true">
-    <Position X="12" Y="7" Width="1.5" />
+    <Position X="11.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Knife.cs</FileName>
@@ -56,7 +56,7 @@
     <Lollipop Position="0.19" />
   </Class>
   <Class Name="CustomInterface.PitchFork" BaseTypeListCollapsed="true">
-    <Position X="10" Y="7" Width="1.5" />
+    <Position X="9.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PitchFork.cs</FileName>
@@ -64,7 +64,7 @@
     <Lollipop Position="0.278" />
   </Class>
   <Class Name="CustomInterface.Fork" BaseTypeListCollapsed="true">
-    <Position X="8.25" Y="7" Width="1.5" />
+    <Position X="8" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Fork.cs</FileName>

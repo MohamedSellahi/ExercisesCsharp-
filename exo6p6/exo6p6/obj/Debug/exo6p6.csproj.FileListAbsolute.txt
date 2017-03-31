@@ -1,5 +1,0 @@
-c:\users\34011-36-05\documents\visual studio 2015\Projects\exo6p6\exo6p6\bin\Debug\exo6p6.exe.config
-c:\users\34011-36-05\documents\visual studio 2015\Projects\exo6p6\exo6p6\bin\Debug\exo6p6.exe
-c:\users\34011-36-05\documents\visual studio 2015\Projects\exo6p6\exo6p6\bin\Debug\exo6p6.pdb
-c:\users\34011-36-05\documents\visual studio 2015\Projects\exo6p6\exo6p6\obj\Debug\exo6p6.exe
-c:\users\34011-36-05\documents\visual studio 2015\Projects\exo6p6\exo6p6\obj\Debug\exo6p6.pdb
